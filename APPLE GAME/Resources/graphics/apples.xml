@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:a9fd830fb338f9e465a6344b7addb36b$ -->
+<Imageset Name="apples" Imagefile="graphics/apples.png" NativeHorzRes="128" NativeVertRes="128" AutoScaled="false">
+    <Image Name="apple" XPos="2" YPos="2" Width="28" Height="38"/>
+    <Image Name="caught" XPos="32" YPos="2" Width="28" Height="38"/>
+    <Image Name="granny" XPos="62" YPos="2" Width="28" Height="38"/>
+    <Image Name="newbasket" XPos="92" YPos="2" Width="28" Height="38"/>
+    <Image Name="slower" XPos="2" YPos="42" Width="28" Height="38"/>
+    <Image Name="splattered" XPos="32" YPos="42" Width="28" Height="38"/>
+    <Image Name="worm" XPos="62" YPos="42" Width="28" Height="38"/>
+</Imageset>

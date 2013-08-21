@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:efee0afad92e435e63c299888b38bcb9$ -->
+<Imageset Name="baskets" Imagefile="graphics/baskets.png" NativeHorzRes="128" NativeVertRes="256" AutoScaled="false">
+    <Image Name="basket" XPos="2" YPos="2" Width="66" Height="76"/>
+    <Image Name="superbasket" XPos="2" YPos="80" Width="90" Height="76"/>
+</Imageset>
