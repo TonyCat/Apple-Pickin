@@ -4,11 +4,14 @@ exports.applepickin = function(){
 var window = Ti.UI.createWindow({backgroundColor:'black'});
 
 // Obtain game module
-var quicktigame2d = require('com.googlecode.quicktigame2d');
+//var quicktigame2d = require('com.googlecode.quicktigame2d');
+
+var platino = require('co.lanica.platino');
+
 
 // Create view for your game.
 // Note that game.screen.width and height are not yet set until the game is loaded
-var game = quicktigame2d.createGameView();
+var game = platino.createGameView();
 
 // Frame rate can be changed (fps can not be changed after the game is loaded)
 game.fps = 30;
@@ -23,7 +26,7 @@ var shapes = new Array();
 var newapples = new Array();
 
 // Create game scene
-var scene = quicktigame2d.createScene();
+var scene = platino.createScene();
 
 
 
@@ -39,14 +42,14 @@ var TOUCH_SCALE = 1;
 
 
 // Create sprites and add them to the scene
-var background = quicktigame2d.createSprite(
+var background = platino.createSprite(
   {image:'images/gamebg.png', x:0, y:0}
 );
 
-var character = quicktigame2d.createSprite({image:'images/girl.png', x:215, y:372});
+var character = platino.createSprite({image:'images/girl.png', x:215, y:372});
 
 //var  playersBasket = quicktigame2d.createSpriteSheet({image:'images/basket.png', x:215, y:372});
-var  playersBasket = quicktigame2d.createSpriteSheet({image:'graphics/baskets.xml', x:215, y:372});
+var  playersBasket = platino.createSpriteSheet({image:'graphics/baskets.xml', x:215, y:372});
 playersBasket.selectFrame("basket");
 
 
@@ -117,11 +120,11 @@ var lbllivestext = Ti.UI.createLabel({
 });
 
 
-var droppedApple1 = quicktigame2d.createSpriteSheet({image:'graphics/apples.xml', x:5, y:30});
+var droppedApple1 = platino.createSpriteSheet({image:'graphics/apples.xml', x:5, y:30});
 droppedApple1.selectFrame("caught");
-var droppedApple2 = quicktigame2d.createSpriteSheet({image:'graphics/apples.xml', x:25, y:30});
+var droppedApple2 = platino.createSpriteSheet({image:'graphics/apples.xml', x:25, y:30});
 droppedApple2.selectFrame("caught");
-var droppedApple3 = quicktigame2d.createSpriteSheet({image:'graphics/apples.xml', x:45, y:30});
+var droppedApple3 = platino.createSpriteSheet({image:'graphics/apples.xml', x:45, y:30});
 droppedApple3.selectFrame("caught");
 
 
@@ -560,7 +563,7 @@ game.addEventListener('onload', function(e) {
      if (game.screen.width != 320){
     	Ti.API.info("we are in retina change the coordinates of all the stuff"); // prints 'true'
     	scene.remove(background);
-    	var bg2 = quicktigame2d.createSprite(
+    	var bg2 = platino.createSprite(
   			{image:'images/gamebg2x.png', x:0, y:0,z:0}
 			);
     	scene.add(bg2);
@@ -656,7 +659,7 @@ var onTouchStart = function(e) {
       
        
         if (typeof shapes[pointName] === 'undefined' || shapes[pointName] == null) {
-            shapes[pointName] = quicktigame2d.createSprite({width:64, height:64});
+            shapes[pointName] = platino.createSprite({width:64, height:64});
             
             if (e.type == 'touchstart') {
             //    shapes[pointName].color(1, 0, 0);  // draw red point when shape is created at touchstart
@@ -972,7 +975,7 @@ function dropNewapples(){
 	//old apple way
 	//newapples[newapple] =  quicktigame2d.createSprite({image:'images/apple.png', x:newx, y:15});
 	
-		newapples[newapple] =  quicktigame2d.createSpriteSheet({image:'graphics/apples.xml', x:newx, y:15});
+		newapples[newapple] =  platino.createSpriteSheet({image:'graphics/apples.xml', x:newx, y:15});
 		
 		
 		var items = Array('apple','apple','apple','apple','apple','granny','apple','worm','granny','slower','newbasket','caught','apple','apple','granny','apple','granny','apple','apple','granny','apple','worm','granny');

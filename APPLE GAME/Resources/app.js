@@ -331,6 +331,10 @@ gamestartWindow.addEventListener('close', function() {
 
 gamestartWindow.addEventListener('open', function() {
 		gamemusic.play();
+		
+		
+			gameScore.hide();
+	
 });
 
 
